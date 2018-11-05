@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<coffee>
+  <coffeeItem id="1" name="Capuchino" price="80" isenable="true" />
+  <coffeeItem id="2" name="Americano" price="10" isenable="true" />
+  <coffeeItem id="3" name="Espresso" price="101" isenable="true" />
+  <coffeeItem id="4" name="Moccachino" price="34" isenable="true" />
+  <coffeeItem id="5" name="Latte" price="41" isenable="true" />
+  <coffeeItem id="6" name="Mociato" price="44" isenable="true" />
+</coffee>

@@ -1,0 +1,67 @@
+﻿@model IEnumerable<CoffeShop2.Models.CoffeItem>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Coffee Shop</h2>
+@*<p class="btn btn-default">
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<div class="row">
+    <div class="col-md-6">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Volume)
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Volume)
+                </td>
+               
+                <td><p><a href="/Home/EditCoffee/@item.Id">Edit</a></p></td>
+                <td>@Html.ActionLink("Delete", "Delete", new { id = item.Id })</td>
+                <td>@Html.ActionLink("Sell Coffee", "Create", "Sell", new { id = item.Id }, null)</td>                
+            </tr>
+            }
+        </table>
+    </div>
+</div>
+
+<script>
+                //window.onload = function () {
+                //    $(".btnHide").click(function () {
+
+                //        var elem = this.id;
+                //        var tr = document.getElementById(elem);
+                //        tr.style.display = "none";
+
+                //    });
+                //    $(".btnRefresh").click(function () {
+                //        $("tr").show();
+                //    });
+
+                //}
+</script>
